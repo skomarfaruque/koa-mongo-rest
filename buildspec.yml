@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+       - cd $CODEBUILD_SRC_DIR && npm install
+       - apt-get install -y zip
+  post_build:
+    commands:
+       - zip -qr build.zip $CODEBUILD_SRC_DIR/*
+       - rm -rf node_modules/
+artifacts:
+  files:
+     - build.zip
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths

@@ -1,0 +1,14 @@
+node_modules
+build
+.idea
+.env
+environment.tf
+terraform-backend.tfconf
+.terraform
+config.auto.tfvars
+yarn-error.log
+npm-error.log
+package-lock.json
+yarn-lock.json
+.DS_Store
+notification.js
